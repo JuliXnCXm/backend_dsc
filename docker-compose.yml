@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  api:
+    container_name: todo-api
+    build: ./backend
+    ports:
+      - "8008:8000"
+  app:
+    container_name: todo-app
+    build: ./todo-frontend
+    ports:
+      - "8501:3000"
